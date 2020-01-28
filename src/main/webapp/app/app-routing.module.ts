@@ -5,6 +5,8 @@ import { navbarRoute } from './layouts/navbar/navbar.route';
 import { DEBUG_INFO_ENABLED } from 'app/app.constants';
 
 import { UserRouteAccessService } from 'app/core/auth/user-route-access-service';
+import { MapsComponent } from 'app/layouts/maps/maps.component';
+import { FilterComponent } from 'app/layouts/filter/filter.component';
 
 const LAYOUT_ROUTES = [navbarRoute, ...errorRoute];
 
@@ -23,6 +25,14 @@ const LAYOUT_ROUTES = [navbarRoute, ...errorRoute];
         {
           path: 'account',
           loadChildren: () => import('./account/account.module').then(m => m.AccountModule)
+        },
+        {
+          path: 'maps',
+          component: MapsComponent
+        },
+        {
+          path: 'filter',
+          component: FilterComponent
         },
         ...LAYOUT_ROUTES
       ],

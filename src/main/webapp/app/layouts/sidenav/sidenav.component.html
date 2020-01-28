@@ -1,0 +1,46 @@
+<mat-sidenav-container >
+
+    <mat-sidenav opened mode="side">
+
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-icon> navigation</mat-icon>
+                <span >Tracking</span>
+            </mat-expansion-panel-header>
+            <mat-panel-title mat-list-item routerLink="maps">
+                <mat-icon>directions_bus</mat-icon>
+                <span class="ml-3"  mat-line>Car</span>
+            </mat-panel-title>
+            <mat-list-item routerLink="maps">
+                <mat-icon> person_pin_circle</mat-icon>
+                <span>Student</span>
+            </mat-list-item>
+        </mat-expansion-panel>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-icon> navigation</mat-icon>
+                <span >List</span>
+            </mat-expansion-panel-header>
+            <mat-panel-title mat-list-item routerLink="filter">
+                <mat-icon>directions_bus</mat-icon>
+                <span class="ml-3"  mat-line>Car</span>
+            </mat-panel-title>
+            <mat-list-item routerLink="filter">
+                <mat-icon> person_pin_circle</mat-icon>
+                <span>Student</span>
+            </mat-list-item>
+            <mat-list-item routerLink="filter">
+                <mat-icon> business</mat-icon>
+                <span>Company</span>
+            </mat-list-item>
+        </mat-expansion-panel>
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="container-fluid">
+            <div class="card jh-card mat-elevation-z18 mb-3" style="min-height: 80vh;">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
